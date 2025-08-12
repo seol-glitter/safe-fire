@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>투척용 소화기로 불 끄기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game">
+    <img id="bg" src="assets/bg.png" alt="배경" />
+    <div id="fireZone" class="zone">
+      <img id="fireOn" src="assets/fire_on.png" alt="불 켜짐" />
+      <img id="fireOff" src="assets/fire_off.png" alt="불 꺼짐" aria-hidden="true" />
+    </div>
+
+    <img id="extinguisher" class="draggable" src="assets/extinguisher.png" alt="투척용 소화기" />
+
+    <button id="resetBtn" title="다시하기" aria-label="다시하기" style="display:none;">↺</button>
+
+    <div id="toast" role="status" aria-live="polite">정답입니다!</div>
+    <audio id="okSound" src="assets/correct.wav" preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

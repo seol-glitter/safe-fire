@@ -1,0 +1,24 @@
+* { box-sizing: border-box; user-select:none; -webkit-user-drag:none; }
+html, body { height:100%; margin:0; }
+body { background: #cfe6f6; font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans KR', Apple SD Gothic Neo, sans-serif; }
+#game { position:relative; width:100vw; height:100vh; overflow:hidden; }
+#bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+
+.zone { position:absolute; right:5vw; top:8vh; width:min(68vw, 820px); height:min(70vh, 600px); display:flex; align-items:center; justify-content:center; }
+.zone img { max-width:100%; max-height:100%; }
+
+#fireOff { display:none; }
+
+#extinguisher { position:absolute; left:6vw; bottom:8vh; width:min(20vw, 260px); height:auto; cursor:grab; touch-action:none; }
+
+#resetBtn { position: absolute; top:16px; right:16px; padding:10px 14px; font-size:18px; border-radius:10px; border:none; background:#111; color:#fff; opacity:.85; }
+#resetBtn:hover { opacity:1; cursor:pointer; }
+
+#toast { position: absolute; right:2vw; bottom:3vh; background:rgba(0,0,0,.6); color:#fff; padding:10px 14px; border-radius:24px; font-size:18px; opacity:0; transform: translateY(10px); transition: all .35s ease; pointer-events:none; }
+#toast.show { opacity:1; transform: translateY(0); }
+
+/* assist small screens */
+@media (max-width: 640px) {
+  #extinguisher { width:min(28vw, 200px); left:4vw; bottom:6vh; }
+  .zone { right:4vw; width:64vw; height:60vh; }
+}
